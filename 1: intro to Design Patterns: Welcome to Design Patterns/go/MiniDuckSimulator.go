@@ -2,7 +2,7 @@ package main
 
 import (
 	"intro/duck"
-	"intro/duck/fly"
+	"intro/duck/behavior/fly"
 )
 
 func main() {

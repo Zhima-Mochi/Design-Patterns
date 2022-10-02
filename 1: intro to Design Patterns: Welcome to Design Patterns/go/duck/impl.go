@@ -2,8 +2,8 @@ package duck
 
 import (
 	"fmt"
-	"intro/duck/fly"
-	"intro/duck/quack"
+	"intro/duck/behavior/fly"
+	"intro/duck/behavior/quack"
 )
 
 func NewMallardDuck() *Duck {
