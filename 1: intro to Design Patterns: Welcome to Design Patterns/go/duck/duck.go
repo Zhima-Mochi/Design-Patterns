@@ -1,0 +1,33 @@
+package duck
+
+import (
+	"fmt"
+	"intro/duck/behavior"
+)
+
+type Duck struct {
+	Display func()
+	// behavior is variable
+	flyingBehavior   behavior.Fly
+	quackingBehavior behavior.Quack
+}
+
+func (d *Duck) PerformFly() {
+	d.flyingBehavior.Fly()
+}
+func (d *Duck) PerformQuack() {
+	d.quackingBehavior.Quack()
+}
+
+// all duck can swim
+func (d *Duck) Swim() {
+	fmt.Println("All ducks float, even decoys!")
+}
+
+func (d *Duck) SetFlyingBehaviour(b behavior.Fly) {
+	d.flyingBehavior = b
+}
+
+func (d *Duck) SetQuackingBehaviour(b behavior.Quack) {
+	d.quackingBehavior = b
+}
