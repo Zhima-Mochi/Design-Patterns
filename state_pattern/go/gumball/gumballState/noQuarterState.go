@@ -1,12 +1,14 @@
-package concrete
+package gumballState
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type NoQuarterState struct {
-	gumballMachine *GumballMachine
+	gumballMachine GumballMachine
 }
 
-func NewNoQuarterState(gumballMachine *GumballMachine) *NoQuarterState {
+func NewNoQuarterState(gumballMachine GumballMachine) *NoQuarterState {
 	return &NoQuarterState{gumballMachine: gumballMachine}
 }
 

@@ -2,17 +2,16 @@ package weather
 
 import (
 	"fmt"
-	weatherInf "observer/interface/weather"
 )
 
 // Observer
 type ForecastDisplay struct {
 	currentPressure float64
 	lastPressure    float64
-	weatherData     weatherInf.Subject
+	weatherData     Subject
 }
 
-func NewForecastDisplay(subject weatherInf.Subject) *ForecastDisplay {
+func NewForecastDisplay(subject Subject) *ForecastDisplay {
 	res := &ForecastDisplay{weatherData: subject}
 	subject.RegisterObserver(res)
 	return res

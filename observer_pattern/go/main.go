@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"observer/concret/weather"
+
+	"github.com/Zhima-Mochi/Design-Patterns/observer_pattern/go/weather"
 )
 
 func main() {

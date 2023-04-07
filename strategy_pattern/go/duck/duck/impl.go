@@ -2,8 +2,9 @@ package duck
 
 import (
 	"fmt"
-	"intro/duck/behavior/fly"
-	"intro/duck/behavior/quack"
+
+	"github.com/Zhima-Mochi/Design-Patterns/strategy_pattern/go/duck/behavior/fly"
+	"github.com/Zhima-Mochi/Design-Patterns/strategy_pattern/go/duck/behavior/quack"
 )
 
 func NewMallardDuck() *Duck {

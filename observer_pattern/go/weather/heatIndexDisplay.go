@@ -2,16 +2,15 @@ package weather
 
 import (
 	"fmt"
-	weatherInf "observer/interface/weather"
 )
 
 // Observer
 type HeatIndexDisplay struct {
 	heatIndex   float64
-	weatherData weatherInf.Subject
+	weatherData Subject
 }
 
-func NewHeatIndexDisplay(subject weatherInf.Subject) *HeatIndexDisplay {
+func NewHeatIndexDisplay(subject Subject) *HeatIndexDisplay {
 	res := &HeatIndexDisplay{weatherData: subject}
 	subject.RegisterObserver(res)
 	return res

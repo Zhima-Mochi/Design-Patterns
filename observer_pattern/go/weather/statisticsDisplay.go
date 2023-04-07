@@ -3,7 +3,6 @@ package weather
 import (
 	"fmt"
 	"math"
-	weatherInf "observer/interface/weather"
 )
 
 // Observer
@@ -12,10 +11,10 @@ type StatisticsDisplay struct {
 	minTemp     float64
 	tempSum     float64
 	numReadings int
-	weatherData weatherInf.Subject
+	weatherData Subject
 }
 
-func NewStatisticsDisplay(subject weatherInf.Subject) *StatisticsDisplay {
+func NewStatisticsDisplay(subject Subject) *StatisticsDisplay {
 	res := &StatisticsDisplay{maxTemp: math.SmallestNonzeroFloat64, minTemp: math.MaxFloat64, weatherData: subject}
 	subject.RegisterObserver(res)
 	return res

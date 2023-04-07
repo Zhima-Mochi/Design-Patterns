@@ -1,28 +1,24 @@
 package weather
 
-import (
-	weatherInf "observer/interface/weather"
-)
-
 // Subject
 type WeatherData struct {
-	observers   []weatherInf.Observer
+	observers   []Observer
 	temperature float64
 	humidity    float64
 	pressure    float64
 }
 
 func NewWeatherData() *WeatherData {
-	res := &WeatherData{observers: make([]weatherInf.Observer, 0)}
+	res := &WeatherData{observers: make([]Observer, 0)}
 	return res
 }
 
-func (wd *WeatherData) RegisterObserver(o weatherInf.Observer) {
+func (wd *WeatherData) RegisterObserver(o Observer) {
 	wd.observers = append(wd.observers, o)
 }
 
-func (wd *WeatherData) RemoveObserver(o weatherInf.Observer) {
-	newObservers := []weatherInf.Observer{}
+func (wd *WeatherData) RemoveObserver(o Observer) {
+	newObservers := []Observer{}
 	for _, observer := range wd.observers {
 		if observer != o {
 			newObservers = append(newObservers, observer)

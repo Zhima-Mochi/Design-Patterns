@@ -2,7 +2,8 @@ package duck
 
 import (
 	"fmt"
-	"intro/duck/behavior"
+
+	"github.com/Zhima-Mochi/Design-Patterns/strategy_pattern/go/duck/behavior"
 )
 
 type Duck struct {

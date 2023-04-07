@@ -1,8 +1,9 @@
 package main
 
 import (
-	"intro/duck"
-	"intro/duck/behavior/fly"
+	"github.com/Zhima-Mochi/Design-Patterns/strategy_pattern/go/duck/behavior/fly"
+
+	"github.com/Zhima-Mochi/Design-Patterns/strategy_pattern/go/duck/duck"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-package abstract
+package gumballState
 
 type State interface {
 	InsertQuarter()
