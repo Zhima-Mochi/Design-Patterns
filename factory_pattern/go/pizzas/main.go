@@ -1,8 +1,8 @@
 package main
 
 import (
-	pizzafactory "github.com/Zhima-Mochi/Design-Patterns/factory_pattern/go/pizzas/pizzaFactory"
 	pizzastore "github.com/Zhima-Mochi/Design-Patterns/factory_pattern/go/pizzas/pizzaStore"
+	pizzafactory "github.com/Zhima-Mochi/Design-Patterns/factory_pattern/go/pizzas/pizzaStore/factory"
 )
 
 func main() {

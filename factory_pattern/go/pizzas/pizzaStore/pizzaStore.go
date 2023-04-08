@@ -2,7 +2,7 @@ package pizzastore
 
 import (
 	"github.com/Zhima-Mochi/Design-Patterns/factory_pattern/go/pizzas/pizza"
-	pizzafactory "github.com/Zhima-Mochi/Design-Patterns/factory_pattern/go/pizzas/pizzaFactory"
+	pizzafactory "github.com/Zhima-Mochi/Design-Patterns/factory_pattern/go/pizzas/pizzaStore/factory"
 )
 
 type PizzaStore struct {
