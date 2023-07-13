@@ -4,8 +4,7 @@ import "sync"
 
 var (
 	uniqueInstance *Singleton
-
-	mu sync.Mutex
+	once           sync.Once
 )
 
 type Singleton struct {
@@ -13,18 +12,13 @@ type Singleton struct {
 
 // GetDescription returns a description of Singleton
 func (s *Singleton) GetDescription() string {
-	return "I'm a singleton using double-checked locking!"
+	return "I'm a singleton using sync.Once!"
 }
 
 // GetInstance returns a singleton instance of Singleton
 func GetInstance() *Singleton {
-	// double-checked locking
-	if uniqueInstance == nil {
-		mu.Lock()
-		defer mu.Unlock()
-		if uniqueInstance == nil {
-			uniqueInstance = &Singleton{}
-		}
-	}
+	once.Do(func() {
+		uniqueInstance = &Singleton{}
+	})
 	return uniqueInstance
 }

@@ -13,7 +13,7 @@ type Singleton struct {
 
 // GetDescription returns a description of Singleton
 func (s *Singleton) GetDescription() string {
-	return "I'm a classic Singleton!"
+	return "I'm a singleton using sync.Mutex!"
 }
 
 // GetInstance returns a singleton instance of Singleton
