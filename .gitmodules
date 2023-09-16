@@ -1,3 +1,0 @@
-[submodule ".openai-git-hooks"]
-	path = .openai-git-hooks
-	url = https://github.com/Zhima-Mochi/git-templates-hooks.git
